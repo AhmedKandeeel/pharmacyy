@@ -131,22 +131,26 @@ class Login extends StatelessWidget {
                         margin: EdgeInsets.only(bottom: 20),
                         child: Row(mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(color: Colors.blue, width: 1)
+                          InkWell( onTap: (){},
+                            child: Container(
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(color: Colors.blue, width: 1)
+                              ),
+                              child: Image.asset('assets/Images/facebook.png', height: 67,),
                             ),
-                            child: Image.asset('assets/Images/facebook.png', height: 67,),
                           ),
                           SizedBox(width: 25,),
           
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            decoration: BoxDecoration( color: Colors.white,
-                              shape: BoxShape.circle,
-                              border: Border.all(color: Colors.red, width: 1)
+                          InkWell( onTap: (){},
+                            child: Container(
+                              padding: EdgeInsets.all(10),
+                              decoration: BoxDecoration( color: Colors.white,
+                                shape: BoxShape.circle,
+                                border: Border.all(color: Colors.red, width: 1)
+                              ),
+                              child: Image.asset('assets/Images/gmailb.png', height: 50,),
                             ),
-                            child: Image.asset('assets/Images/gmailb.png', height: 50,),
                           ),
                         ],
                         ),

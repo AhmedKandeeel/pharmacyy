@@ -599,7 +599,7 @@ class Welcome extends StatelessWidget {
                       child: Material(
                         color: Colors.grey[200],
                         child: InkWell(
-                          onTap: (){},
+                          onTap: (){Navigator.pushNamed(context, "/Second");},
                           child: Column(
                             children: [Padding(padding: EdgeInsets.all(5)),
                               Image.asset('assets/Images/Panadol-Base-24s-(3D).png', width: 105,),

@@ -1,10 +1,10 @@
-// ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names
+// ignore_for_file: prefer_const_constructors, file_names, prefer_const_literals_to_create_immutables, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class First extends StatelessWidget {
-  const First({super.key});
+class Second extends StatelessWidget {
+  const Second({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,10 @@ class First extends StatelessWidget {
 
         body: Column(
           children: [
-            Image.asset('assets/Images/Flagyl-Ovules-removebg-preview.png', height: 250,),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Image.asset('assets/Images/Panadol-Base-24s-(3D).png', width: 150,),
+            ),
             Expanded(
               child: Container(
                 padding: EdgeInsets.all(20),
@@ -61,7 +64,7 @@ class First extends StatelessWidget {
                           width: 65,
                           child: Column(
                             children: [
-                              Text('25', 
+                              Text('45', 
                               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                               ),
                               Text('L.E', 
@@ -74,7 +77,7 @@ class First extends StatelessWidget {
                     ),
                     Container( alignment: Alignment.topLeft,
                       child: 
-                          Text('Flagyl 500',
+                          Text('Panadol',
                           style: TextStyle(
                             fontSize: 24, fontWeight: FontWeight.bold
                           ),
@@ -88,13 +91,59 @@ class First extends StatelessWidget {
                       onRatingUpdate: (Rating) {}
                       ),
                     Container(alignment: Alignment.topRight,
-                    child: Text('يعد دواء فلاجيل من المضادات الحيوية فهو يحتوي على المادة الفعالة ميترونيدازول شائعة الاستخدام، وهي من عائلة النيتروايميدازول، يستخدم فلاجيل دواء بصورة متكررة لعلاج التهابات الجهاز الهضمي كما في داء الأميبيات، والجيارديات.',
+                    child: Text('بانادول أدفانس مسكن سريع وفعال للآلام الخفيفة والمتوسطة بما فيها:',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, height: 1.5,
                     ),
                     textDirection: TextDirection.rtl,
                     ),
                     ),
-                    SizedBox(height: 20,),
+                    Container(alignment: Alignment.topRight,
+                    child: Text('الصداع',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, height: 1.5,
+                    ),
+                    textDirection: TextDirection.rtl,
+                    ),
+                    ),
+                    Container(alignment: Alignment.topRight,
+                    child: Text('آلام العضلات',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, height: 1.5,
+                    ),
+                    textDirection: TextDirection.rtl,
+                    ),
+                    ),
+                    Container(alignment: Alignment.topRight,
+                    child: Text('آلام الأسنان',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, height: 1.5,
+                    ),
+                    textDirection: TextDirection.rtl,
+                    ),
+                    ),
+                    Container(alignment: Alignment.topRight,
+                    child: Text('التهاب المفاصل',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, height: 1.5,
+                    ),
+                    textDirection: TextDirection.rtl,
+                    ),
+                    ),
+                    SizedBox(height: 10,),
+
+                    Container(
+                      width: 150,
+                      height: 50,
+                      decoration: ShapeDecoration(shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                          ),
+                          color: Colors.amber
+                        ),
+                      child: Row( mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image(image: AssetImage('assets/Images/minus-sign.png')),
+                          Text('1'),
+                          Icon(Icons.add)
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 5,),
 
                     Container(
                       decoration: BoxDecoration(
