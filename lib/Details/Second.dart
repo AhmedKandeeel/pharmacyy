@@ -8,172 +8,172 @@ class Second extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
+      backgroundColor: Colors.deepOrange[300],
+      appBar: AppBar(
         backgroundColor: Colors.deepOrange[300],
-        appBar: AppBar(
-          backgroundColor: Colors.deepOrange[300],
-          elevation: 0,
-          leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),
-          actions: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.keyboard_option_key))
-          ],
-        ),
+        elevation: 0,
+        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),
+        actions: [
+          IconButton(onPressed: (){}, icon: Icon(Icons.keyboard_option_key))
+        ],
+      ),
 
-        body: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: Image.asset('assets/Images/Panadol-Base-24s-(3D).png', width: 150,),
-            ),
-            Expanded(
-              child: Container(
-                padding: EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30)
-                  )
-                ),
-                child: Column(
-                  children: [
-                    Row(
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Image.asset('assets/Images/Panadol-Base-24s-(3D).png', width: 150,),
+          ),
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30)
+                )
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.location_on_outlined),
+                      Text('Pharmacy'),
+                      SizedBox(width: 50,),
+                      
+                      Expanded(child: Column(
+                        children: [],
+                      ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.amber,
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                            bottomLeft: Radius.elliptical(50, 100),
+                            bottomRight: Radius.elliptical(50, 100),
+                          )
+                        ),
+                        padding: EdgeInsets.symmetric(vertical: 15),
+                        alignment: Alignment.topCenter,
+                        height: 65,
+                        width: 65,
+                        child: Column(
+                          children: [
+                            Text('45', 
+                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                            ),
+                            Text('L.E', 
+                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Container( alignment: Alignment.topLeft,
+                    child: 
+                        Text('Panadol',
+                        style: TextStyle(
+                          fontSize: 24, fontWeight: FontWeight.bold
+                        ),
+                        ),
+                  ),
+                  RatingBar.builder(
+                    initialRating: 3,
+                    minRating: 1,
+                    direction: Axis.horizontal,
+                    itemBuilder: (context, _) => Icon(Icons.star, color: Colors.yellow,),
+                    onRatingUpdate: (Rating) {}
+                    ),
+                  Container(alignment: Alignment.topRight,
+                  child: Text('بانادول أدفانس مسكن سريع وفعال للآلام الخفيفة والمتوسطة بما فيها:',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, height: 1.5,
+                  ),
+                  textDirection: TextDirection.rtl,
+                  ),
+                  ),
+                  Container(alignment: Alignment.topRight,
+                  child: Text('الصداع',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, height: 1.5,
+                  ),
+                  textDirection: TextDirection.rtl,
+                  ),
+                  ),
+                  Container(alignment: Alignment.topRight,
+                  child: Text('آلام العضلات',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, height: 1.5,
+                  ),
+                  textDirection: TextDirection.rtl,
+                  ),
+                  ),
+                  Container(alignment: Alignment.topRight,
+                  child: Text('آلام الأسنان',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, height: 1.5,
+                  ),
+                  textDirection: TextDirection.rtl,
+                  ),
+                  ),
+                  Container(alignment: Alignment.topRight,
+                  child: Text('التهاب المفاصل',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, height: 1.5,
+                  ),
+                  textDirection: TextDirection.rtl,
+                  ),
+                  ),
+                  SizedBox(height: 10,),
+
+                  Container(
+                    width: 120,
+                    height: 40,
+                    decoration: ShapeDecoration(shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                        ),
+                        color: Colors.blue
+                      ),
+                    child: Row( mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.location_on_outlined),
-                        Text('Pharmacy'),
-                        SizedBox(width: 50,),
-                        
-                        Expanded(child: Column(
-                          children: [],
-                        ),
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.amber,
-                            borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(15),
-                              topLeft: Radius.circular(15),
-                              bottomLeft: Radius.elliptical(50, 100),
-                              bottomRight: Radius.elliptical(50, 100),
-                            )
-                          ),
-                          padding: EdgeInsets.symmetric(vertical: 15),
-                          alignment: Alignment.topCenter,
-                          height: 65,
-                          width: 65,
-                          child: Column(
-                            children: [
-                              Text('45', 
-                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                              ),
-                              Text('L.E', 
-                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
-                              ),
-                            ],
-                          ),
-                        ),
+                        Image(image: AssetImage('assets/Images/minus-sign.png')),
+                        SizedBox(width: 15,),
+                        Text('1', style: TextStyle(fontSize: 18),),
+                        SizedBox(width: 15,),
+                        Icon(Icons.add)
                       ],
                     ),
-                    Container( alignment: Alignment.topLeft,
-                      child: 
-                          Text('Panadol',
-                          style: TextStyle(
-                            fontSize: 24, fontWeight: FontWeight.bold
-                          ),
-                          ),
-                    ),
-                    RatingBar.builder(
-                      initialRating: 3,
-                      minRating: 1,
-                      direction: Axis.horizontal,
-                      itemBuilder: (context, _) => Icon(Icons.star, color: Colors.yellow,),
-                      onRatingUpdate: (Rating) {}
-                      ),
-                    Container(alignment: Alignment.topRight,
-                    child: Text('بانادول أدفانس مسكن سريع وفعال للآلام الخفيفة والمتوسطة بما فيها:',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, height: 1.5,
-                    ),
-                    textDirection: TextDirection.rtl,
-                    ),
-                    ),
-                    Container(alignment: Alignment.topRight,
-                    child: Text('الصداع',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, height: 1.5,
-                    ),
-                    textDirection: TextDirection.rtl,
-                    ),
-                    ),
-                    Container(alignment: Alignment.topRight,
-                    child: Text('آلام العضلات',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, height: 1.5,
-                    ),
-                    textDirection: TextDirection.rtl,
-                    ),
-                    ),
-                    Container(alignment: Alignment.topRight,
-                    child: Text('آلام الأسنان',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, height: 1.5,
-                    ),
-                    textDirection: TextDirection.rtl,
-                    ),
-                    ),
-                    Container(alignment: Alignment.topRight,
-                    child: Text('التهاب المفاصل',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, height: 1.5,
-                    ),
-                    textDirection: TextDirection.rtl,
-                    ),
-                    ),
-                    SizedBox(height: 10,),
+                  ),
+                  SizedBox(height: 5,),
 
-                    Container(
-                      width: 150,
-                      height: 50,
-                      decoration: ShapeDecoration(shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25),
-                          ),
-                          color: Colors.amber
-                        ),
-                      child: Row( mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image(image: AssetImage('assets/Images/minus-sign.png')),
-                          Text('1'),
-                          Icon(Icons.add)
-                        ],
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.deepOrange,
+                      borderRadius: BorderRadius.circular(15)
                       ),
-                    ),
-                    SizedBox(height: 5,),
-
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.deepOrange,
-                        borderRadius: BorderRadius.circular(15)
-                        ),
-                        child: Material( color: Colors.transparent,
-                          child: InkWell(
-                            onTap: (){},
-                            child: Padding(
-                              padding: const EdgeInsets.all(20),
-                              child: Row( mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(Icons.shopping_basket_outlined, color: Colors.white,),
-                                  SizedBox(width: 10,),
-                                  Text("Add to card", style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),)
-                                ],
-                              ),
+                      child: Material( color: Colors.transparent,
+                        child: InkWell(
+                          onTap: (){},
+                          child: Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: Row( mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(Icons.shopping_basket_outlined, color: Colors.white,),
+                                SizedBox(width: 10,),
+                                Text("Add to card", style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),)
+                              ],
                             ),
                           ),
                         ),
-                    ),
-                    SizedBox(height: 15,),
-                  ],
-                ),
+                      ),
+                  ),
+                  SizedBox(height: 15,),
+                ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
-      );
+    );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pharmacyy/Details/First.dart';
+import 'package:pharmacyy/Details/Second.dart';
 import 'package:pharmacyy/More/Account.dart';
 import 'package:pharmacyy/More/Account/Login.dart';
 import 'package:pharmacyy/More/Account/SignUp.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       "/" :(context) => const Welcome(),
       "/Offers" :(context) => const Offers(),
       "/First" :(context) => const First(),
+      "/Second" :(context) => const Second(),
       "/More" :(context) => const More(),
       "/Account" :(context) => const Account(),
       "/Login" :(context) => const Login(),
