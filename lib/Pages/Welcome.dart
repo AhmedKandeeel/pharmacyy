@@ -643,7 +643,7 @@ class Welcome extends StatelessWidget {
                       child: Material(
                         color: Colors.grey[200],
                         child: InkWell(
-                          onTap: (){},
+                          onTap: (){Navigator.pushNamed(context, "/Third");},
                           child: Column(
                             children: [Padding(padding: EdgeInsets.all(5)),
                               Image.asset('assets/Images/Flagyl-Ovules-removebg-preview.png'),
