@@ -3,9 +3,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class First extends StatelessWidget {
+class First extends StatefulWidget {
   const First({super.key});
 
+  @override
+  State<First> createState() => _FirstState();
+}
+
+class _FirstState extends State<First> {
+  int _count = 0;
+  
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -82,7 +89,7 @@ class First extends StatelessWidget {
                             ),
                       ),
                       RatingBar.builder(
-                        initialRating: 3,
+                        initialRating: 0,
                         minRating: 1,
                         direction: Axis.horizontal,
                         itemBuilder: (context, _) => Icon(Icons.star, color: Colors.yellow,),
@@ -97,25 +104,47 @@ class First extends StatelessWidget {
                       ),
                       SizedBox(height: 10,),
               
-                       Container(
-                        width: 120,
-                        height: 40,
-                        decoration: ShapeDecoration(shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5),
-                            ),
-                            color: Colors.blue
-                          ),
-                        child: Row( mainAxisAlignment: MainAxisAlignment.center,
+                       Row( mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image(image: AssetImage('assets/Images/minus-sign.png')),
-                            SizedBox(width: 15,),
-                            Text('1', style: TextStyle(fontSize: 18),),
-                            SizedBox(width: 15,),
-                            Icon(Icons.add)
-                          ],
+                            Container(
+                              padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5)),
+                              child: Row(
+                                children: [
+                                  CircleAvatar(
+                                    radius: 20,
+                                    backgroundColor: Colors.greenAccent,
+                                    child: IconButton(onPressed: (){
+                                      setState(() {
+                                        _count -= 1;
+                                        });
+                                      }, 
+                                      icon: Icon(Icons.remove), color: Colors.white,
+                                      ),
+                                  ),
+                                  SizedBox(width: 20),
+            
+                                  Text(_count.toString(), style: TextStyle(color: Colors.black, fontSize: 20),),
+                                  SizedBox(width: 20),
+
+                                  CircleAvatar(
+                                    radius: 20,
+                                    backgroundColor: Colors.greenAccent,
+                                    child: IconButton(onPressed: (){
+                                      setState(() {
+                                        _count += 1;
+                                        });
+                                      }, 
+                                      icon: Icon(Icons.add), color: Colors.white,
+                                      ),
+                                  ),
+                                      ],
+                                    ),
+                              )
+                            ],
                         ),
-                      ),
-                      SizedBox(height: 5,),
+                        SizedBox(height: 10,),
               
                       Container(
                         decoration: BoxDecoration(
