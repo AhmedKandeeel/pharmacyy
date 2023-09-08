@@ -10,7 +10,15 @@ class Welcome extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.deepOrange[500],
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          toolbarHeight: 65,
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(35), bottomRight: Radius.circular(35)),
+              color: Colors.deepOrange[500],
+            ),
+          ),
           title: Column( crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text('Delivering to',
