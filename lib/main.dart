@@ -9,7 +9,8 @@ import 'package:pharmacyy/Pages/More.dart';
 import 'package:pharmacyy/Pages/Offers.dart';
 import 'package:pharmacyy/Pages/Welcome.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 

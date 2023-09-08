@@ -102,7 +102,7 @@ class More extends StatelessWidget {
                 ),
                   GestureDetector(
                     onTap: (){},
-                    child: Text("Pay",
+                    child: Text("Your Payments",
                     style: TextStyle(color: Colors.black, fontSize: 16,
                     ),
                     textAlign: TextAlign.left,

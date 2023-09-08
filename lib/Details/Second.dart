@@ -22,7 +22,7 @@ class _SecondState extends State<Second> {
         elevation: 0,
         leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),
         actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.payment))
+          IconButton(onPressed: (){}, icon: Icon(Icons.ios_share))
         ],
       ),
 

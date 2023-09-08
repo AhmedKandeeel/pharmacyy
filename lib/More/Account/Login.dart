@@ -2,9 +2,14 @@
 
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
   const Login({super.key});
 
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -39,7 +44,9 @@ class Login extends StatelessWidget {
                       borderRadius: BorderRadius.circular(25),
                     ),
                     child: TextField(
+                      onChanged: (value) => {},
                       textInputAction: TextInputAction.next,
+                      keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                         suffix: Icon(Icons.visibility, color: Colors.cyan[900]),
                         icon: Icon( Icons.person, color: Colors.deepOrange),
@@ -61,6 +68,7 @@ class Login extends StatelessWidget {
                       borderRadius: BorderRadius.circular(25),
                     ),
                     child: TextField(
+                      onChanged: (value) => {},
                       obscureText: true,
                       decoration: InputDecoration(
                         suffix: Icon(Icons.visibility, color: Colors.cyan[900]),
@@ -75,7 +83,7 @@ class Login extends StatelessWidget {
                   ),
 
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: (){},
                     child: Text(
                       "Login",
                       style: TextStyle(fontSize: 24),
@@ -157,11 +165,7 @@ class Login extends StatelessWidget {
                       ),
 
                 ],
-              ),
-
-        
-        
-        
+              ),       
             ],
           ),
         ),
