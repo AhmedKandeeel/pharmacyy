@@ -29,7 +29,11 @@ class _LoadingState extends State<Loading> {
     return Scaffold(
       backgroundColor: Colors.deepOrange[500],
       body: Center(
-        child: Image.asset('assets/Images/pharmacy.png', height: 100,),
+        child: Column(
+          children: [
+            Image.asset('assets/Images/pharmacy.png', height: 100,),
+          ],
+        ),
       ),
     );
   }
