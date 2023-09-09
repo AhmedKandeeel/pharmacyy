@@ -1,3 +1,4 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:pharmacyy/Details/First.dart';
 import 'package:pharmacyy/Details/Second.dart';
@@ -21,9 +22,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      home: AnimatedSplashScreen(
+        duration: 3000,
+        splashTransition: SplashTransition.decoratedBoxTransition,
+        backgroundColor: Colors.deepOrange,
+        splash: 
+        Center(
+        child: Image.asset('assets/Images/pharmacy.png', height: 100,)),
+      nextScreen: const Welcome(),
+      ),
     initialRoute: '/',
     routes: {
-      "/" :(context) => const Welcome(),
+      "/Welcome" :(context) => const Welcome(),
       "/Offers" :(context) => const Offers(),
       "/First" :(context) => const First(),
       "/Second" :(context) => const Second(),

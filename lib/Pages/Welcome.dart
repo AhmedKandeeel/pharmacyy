@@ -35,7 +35,7 @@ class Welcome extends StatelessWidget {
               ),
             ],
           ),
-          leading: ImageIcon(AssetImage('assets/Images/pharmacy.png')),
+          leading: ImageIcon(AssetImage('assets/Images/pharmacy1.png'),),
           actions: [
             IconButton(onPressed: (){}, 
             icon: Image.asset('assets/Icons/customer-service.ico', color: Colors.white,))
