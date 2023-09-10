@@ -61,16 +61,16 @@ class _NavBarState extends State<NavBar> {
     unselectedItemColor: Colors.black,
       items:  <BottomNavigationBarItem>[
         BottomNavigationBarItem(icon: Icon(Icons.home_outlined,
-        color: _selectedIndex == 0? Colors.black : Colors.white,),
+        color: _selectedIndex == 0? Colors.lime : Colors.black,),
         label: "Home"),
         BottomNavigationBarItem(icon: Icon(Icons.search,
-        color: _selectedIndex == 0? Colors.black : Colors.white,),
+        color: _selectedIndex == 0? Colors.lime : Colors.black,),
         label: "Search"),
         BottomNavigationBarItem(icon: Icon(Icons.shopping_cart_checkout,
-        color: _selectedIndex == 0? Colors.black : Colors.white,),
+        color: _selectedIndex == 0? Colors.lime : Colors.black,),
         label: "Cart"),
         BottomNavigationBarItem(icon: ImageIcon(const AssetImage("assets/Images/menu.png"),
-        color: _selectedIndex == 0? Colors.black : Colors.white,),
+        color: _selectedIndex == 0? Colors.lime : Colors.black,),
         label: "More"),
 
       ]);
