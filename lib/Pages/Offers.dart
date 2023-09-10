@@ -11,20 +11,22 @@ class Offers extends StatefulWidget {
 }
 
 class _OffersState extends State<Offers> {
-  int _selectedIndex = 0;
+  var _selectedIndex = 0;
+
+  void _onItemTapped(int index){
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.deepOrange[300],
       
-      bottomNavigationBar: MoltenBottomNavigationBar(
-        onTabChange: (index) => {
-          setState(() {
-              _selectedIndex = index;
-            }
-          )
-        },
+      bottomNavigationBar:
+      MoltenBottomNavigationBar(
+        onTabChange: _onItemTapped,
         barColor: Colors.deepOrange[600],
         domeCircleColor: Colors.white,
         tabs: [MoltenTab(icon: Icon(Icons.home, color: Colors.red[900],),
@@ -43,7 +45,7 @@ class _OffersState extends State<Offers> {
         appBar: AppBar(
           backgroundColor: Colors.deepOrange[300],
           elevation: 0,
-          leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),
+          leading: IconButton(onPressed: ()=> Navigator.of(context).pop(), icon: Icon(Icons.arrow_back)),
           actions: [
             IconButton(onPressed: (){}, icon: Icon(Icons.keyboard_option_key))
           ],

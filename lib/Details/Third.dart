@@ -20,7 +20,7 @@ class _ThirdState extends State<Third> {
         appBar: AppBar(
           backgroundColor: Colors.deepOrange[300],
           elevation: 0,
-          leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),
+          leading: IconButton(onPressed: ()=> Navigator.of(context).pop(), icon: Icon(Icons.arrow_back)),
           actions: [
             IconButton(onPressed: (){}, icon: Icon(Icons.keyboard_option_key))
           ],

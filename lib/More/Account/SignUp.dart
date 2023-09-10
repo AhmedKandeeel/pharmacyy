@@ -1,9 +1,20 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables, file_names
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:pharmacyy/More/Account/Login.dart';
+import 'package:pharmacyy/Pages/Welcome.dart';
 
-class SignUp extends StatelessWidget {
+class SignUp extends StatefulWidget {
   const SignUp({super.key});
+
+  @override
+  State<SignUp> createState() => _SignUpState();
+}
+
+class _SignUpState extends State<SignUp> {
+  final TextEditingController _emailAdressController = TextEditingController();
+  final TextEditingController _passwordAdressController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +32,7 @@ class SignUp extends StatelessWidget {
                     Container( alignment: Alignment.center,
                       child: Padding(
                         padding: const EdgeInsets.all(3.0),
-                        child: Text('SignUP', style: TextStyle(
+                        child: Text('Sign UP', style: TextStyle(
                           fontSize: 28, fontWeight: FontWeight.bold, color: Colors.brown[700], 
                         height: 3, fontFamily: "nfont"),
                         ),
@@ -155,7 +166,18 @@ class SignUp extends StatelessWidget {
                     ),
                   
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        FirebaseAuth.instance.createUserWithEmailAndPassword(
+                          email: _emailAdressController.text, 
+                          password: _passwordAdressController.text)
+                          .then((value) => {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => Welcome(),
+                              ),
+                              ),
+                            }
+                            );
+                      },
                       child: Text(
                         "SignUp",
                         style: TextStyle(fontSize: 24),
@@ -169,24 +191,6 @@ class SignUp extends StatelessWidget {
                       ),
                       ),
                       SizedBox(
-                        height: 25,
-                      ),
-
-                      Row(mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                       Text("Already have an acoount?  ", 
-                       style: TextStyle(fontSize: 12)
-                       ),
-                       
-                       GestureDetector(onTap: (){ },
-                        child: Text("Login",
-                        style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,
-                        decoration: TextDecoration.underline)
-                        )
-                        ),
-                      ],
-                    ),
-                    SizedBox(
                         height: 25,
                       ),
                   
@@ -234,13 +238,33 @@ class SignUp extends StatelessWidget {
                         ],
                         ),
                       ),
-                  
                   ],
                 ),
               ],
             ),
           ),
         ),
+        bottomNavigationBar: BottomAppBar( color: Colors.deepOrange[200],
+            child: SizedBox(height: 50,
+            child: Row(
+                          children: [
+                           Text("Already have an acoount?", 
+                           style: TextStyle(fontSize: 13)
+                           ),
+                           
+                           TextButton(onPressed: (){
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => Login()));},
+                            child: Text("Log In",
+                            style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,
+                            fontFamily: "nfont", decoration: TextDecoration.underline, color: Colors.deepPurple)
+                            )
+                            ),
+                          ],
+                          mainAxisAlignment: MainAxisAlignment.center,
+                        ),
+                        ),
+          ),
       ),
     );
   }

@@ -2,18 +2,26 @@
 
 import 'package:flutter/material.dart';
 
-class Account extends StatelessWidget {
+class Account extends StatefulWidget {
   const Account({super.key});
 
+  @override
+  State<Account> createState() => _AccountState();
+}
+
+class _AccountState extends State<Account> {
+  
   @override
   Widget build(BuildContext context) {
     return SafeArea( child:
       Scaffold(
          body: 
          Container(
-          color: Colors.white,
           width: double.infinity,
           height: double.infinity,
+          decoration: BoxDecoration(
+            image: DecorationImage(image: AssetImage('assets/Images/depositphotos_435815650-stock-photo-shopping-trolley-and-medicine-expensive.jpg'), fit: BoxFit.fill)
+          ),
           child: Stack(
             children: [
               Column(
@@ -24,11 +32,7 @@ class Account extends StatelessWidget {
                     height: 5),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(25),
-                    child: Image.asset('assets/Images/tablet.png', height: 150,),
-                  ),
-                  SizedBox(height: 25,),
+                  SizedBox(height: 100,),
                 
                   Container( alignment: Alignment.topLeft,
                       padding: EdgeInsets.all(10),
@@ -37,7 +41,7 @@ class Account extends StatelessWidget {
                     onPressed: () {Navigator.pushNamed(context, "/Login");
                     }, 
                     child: Text(
-                      "Login",
+                      "Log In",
                       style: TextStyle(fontSize: 24),
                     ),
                     style: ButtonStyle(
@@ -51,7 +55,7 @@ class Account extends StatelessWidget {
                     SizedBox(
                       height: 22,
                     ),
-
+    
                     Container( alignment: Alignment.topLeft,
                       padding: EdgeInsets.all(10),
                       child: Text("Create Account", style: TextStyle(fontWeight: FontWeight.bold),)
@@ -60,7 +64,7 @@ class Account extends StatelessWidget {
                     onPressed: () {Navigator.pushNamed(context, "/SignUp");
                     }, 
                     child: Text(
-                      "SignUp",
+                      "Sign Up",
                       style: TextStyle(fontSize: 24),
                     ),
                     style: ButtonStyle(
@@ -75,17 +79,17 @@ class Account extends StatelessWidget {
                     SizedBox(
                       height: 30,
                     ),
-
+    
                     Row( mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('Call us', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),),
+                        Text('Call us', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white)),
                         SizedBox(
                           width: 5,
                         ),
-
+    
                         GestureDetector(onTap: (){ },
                       child: 
-                      Text("01111111111", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, decoration: TextDecoration.underline)
+                      Text("01111111111", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, decoration: TextDecoration.underline, color: Colors.white)
                       ),
                       ),
                       ],
