@@ -162,7 +162,7 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ),
                     SizedBox(
-                      height: 15,
+                      height: 20,
                     ),
                   
                     ElevatedButton(
@@ -178,16 +178,20 @@ class _SignUpState extends State<SignUp> {
                             }
                             );
                       },
-                      child: Text(
-                        "SignUp",
-                        style: TextStyle(fontSize: 24),
-                      ),
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(Colors.cyan[700]),
                         padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 80, vertical: 10)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25)),
                         ),
+                      ),
+                      child: Row( mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            "SignUp",
+                            style: TextStyle(fontSize: 24),
+                          ),
+                        ],
                       ),
                       ),
                       SizedBox(

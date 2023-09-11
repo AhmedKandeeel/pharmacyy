@@ -42,12 +42,12 @@ class _LoginState extends State<Login> {
                           padding: const EdgeInsets.all(60.0),
                           child: Text('Log In', style: TextStyle(
                             fontSize: 28, fontWeight: FontWeight.bold, color: Colors.brown[700], 
-                          height: 3, fontFamily: "nfont"),
+                          height: 5, fontFamily: "nfont"),
                           ),
                         ),
                       ),
                       SizedBox(
-                        height: 70,
+                        height: 20,
                       ),
                       
                 
@@ -95,9 +95,13 @@ class _LoginState extends State<Login> {
                       TextButton(onPressed: (){
                             Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) => Forget()));}, 
-                      child: Text("Forget password?")),
+                      child: Padding( padding: EdgeInsets.only(right: 20),
+                        child: Align( alignment: Alignment.bottomRight,
+                          child: Text("Forget password?")),
+                      ),
+                      ),
                       SizedBox(
-                        height: 20,
+                        height: 7,
                       ),
                 
                       ElevatedButton(
@@ -113,16 +117,20 @@ class _LoginState extends State<Login> {
                             }
                             );
                         },
-                        child: Text(
-                          "Login",
-                          style: TextStyle(fontSize: 24),
-                        ),
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(Colors.cyan[700]),
                           padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 80, vertical: 10)),
                           shape: MaterialStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(25)),
                           ),
+                        ),
+                        child: Row( mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              "LogIn",
+                              style: TextStyle(fontSize: 24),
+                            ),
+                          ],
                         ),
                         ),
                       SizedBox(

@@ -20,23 +20,23 @@ class _AccountState extends State<Account> {
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage('assets/Images/depositphotos_435815650-stock-photo-shopping-trolley-and-medicine-expensive.jpg'), fit: BoxFit.fill)
+            image: DecorationImage(image: AssetImage('assets/Images/6929748.jpg'), fit: BoxFit.cover)
           ),
           child: Stack(
             children: [
               Column(
                 children: [
                   Container( alignment: Alignment.center,
-                    child: Text('"Pharmacy"', style: TextStyle(
-                      fontSize: 28, fontWeight: FontWeight.bold, color: Colors.blue[800], 
-                    height: 5),
+                    child: Text('"Pharmacy"', style: TextStyle( fontFamily: "nfont",
+                      fontSize: 30, fontWeight: FontWeight.bold, color: Colors.deepOrange, 
+                    height: 8.5),
                     ),
                   ),
-                  SizedBox(height: 100,),
+                  SizedBox(height: 15,),
                 
                   Container( alignment: Alignment.topLeft,
                       padding: EdgeInsets.all(10),
-                    child: Text('Have an Account',style: TextStyle(fontWeight: FontWeight.bold),)),
+                    child: Text('Have an Account',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),)),
                   ElevatedButton(
                     onPressed: () {Navigator.pushNamed(context, "/Login");
                     }, 
@@ -45,7 +45,7 @@ class _AccountState extends State<Account> {
                       style: TextStyle(fontSize: 24),
                     ),
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.deepOrange[200]),
+                      backgroundColor: MaterialStateProperty.all(Colors.red[400]),
                       padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 80, vertical: 10)),
                       shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(25)
@@ -58,18 +58,17 @@ class _AccountState extends State<Account> {
     
                     Container( alignment: Alignment.topLeft,
                       padding: EdgeInsets.all(10),
-                      child: Text("Create Account", style: TextStyle(fontWeight: FontWeight.bold),)
+                      child: Text("Create Account", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),)
                       ),
                     ElevatedButton(
                     onPressed: () {Navigator.pushNamed(context, "/SignUp");
                     }, 
                     child: Text(
                       "Sign Up",
-                      style: TextStyle(fontSize: 24),
+                      style: TextStyle(fontSize: 24, color: Colors.white),
                     ),
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.deepOrange[400]),
-                      foregroundColor: MaterialStateProperty.all(Colors.black),
+                      backgroundColor: MaterialStateProperty.all(Colors.orangeAccent[400]),
                       padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 80, vertical: 10)),
                       shape: MaterialStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(25)
@@ -79,29 +78,30 @@ class _AccountState extends State<Account> {
                     SizedBox(
                       height: 30,
                     ),
-    
-                    Row( mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('Call us', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white)),
-                        SizedBox(
-                          width: 5,
-                        ),
-    
-                        GestureDetector(onTap: (){ },
-                      child: 
-                      Text("01111111111", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, decoration: TextDecoration.underline, color: Colors.white)
-                      ),
-                      ),
-                      ],
-                    )
                 ],
               ),
-        
-        
             ],
           ),
         ),
+        bottomNavigationBar: BottomAppBar( color: Colors.indigoAccent[100],
+        child: SizedBox(height: 50,
+          child: Row(mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Call Us", 
+                style: TextStyle(fontSize: 14, color: Colors.black, fontFamily: "mfont")
+                  ),
+                           
+              TextButton(onPressed: (){},
+                child: Text("01096794426",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,
+                      fontFamily: "nfont", decoration: TextDecoration.underline, color: Colors.black)
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
       ),
+    )
     );
   }
 }

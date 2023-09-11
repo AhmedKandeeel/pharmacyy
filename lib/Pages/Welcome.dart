@@ -1,4 +1,4 @@
-// ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, sort_child_properties_last
+// ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, sort_child_properties_last, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import '../Custom.dart';
@@ -11,12 +11,11 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
-
   @override
   Widget build(BuildContext context) {
     return Custom(
       showNavBar: true,
-      initialIndex: 1,
+      initialIndex: 0,
       body: SafeArea(
         child: Scaffold(
           appBar: AppBar(
@@ -60,26 +59,6 @@ class _WelcomeState extends State<Welcome> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Container(
-                    margin: EdgeInsets.all(5),
-                    padding: EdgeInsets.symmetric(horizontal: 20,vertical: 3),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      border: Border.all(color: Colors.black)
-                    ), 
-                    child: TextField(
-                      onChanged: (value) => value,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Search by name",
-                        icon: Icon(Icons.search, color: Colors.orange[600],),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  
                   Container(
                   width: double.infinity,
                   child: Text("Category",

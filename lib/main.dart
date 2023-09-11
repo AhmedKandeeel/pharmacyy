@@ -7,9 +7,11 @@ import 'package:pharmacyy/Details/Third.dart';
 import 'package:pharmacyy/More/Account.dart';
 import 'package:pharmacyy/More/Account/Login.dart';
 import 'package:pharmacyy/More/Account/SignUp.dart';
+import 'package:pharmacyy/Pages/Cart.dart';
 import 'package:pharmacyy/Pages/More.dart';
 import 'package:pharmacyy/Pages/Offers.dart';
 import 'package:pharmacyy/Pages/Welcome.dart';
+import 'package:pharmacyy/Search/Search1.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,6 +38,8 @@ class MyApp extends StatelessWidget {
     initialRoute: '/',
     routes: {
       "/Welcome" :(context) => const Welcome(),
+      "/Search1" :(context) => const Search1(),
+      "/Cart" :(context) => const Cart(),
       "/Offers" :(context) => const Offers(),
       "/First" :(context) => const First(),
       "/Second" :(context) => const Second(),

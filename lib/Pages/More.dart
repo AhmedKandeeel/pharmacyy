@@ -11,7 +11,7 @@ class More extends StatelessWidget {
   Widget build(BuildContext context) {
     return Custom(
       showNavBar: true,
-      initialIndex: 1,
+      initialIndex: 3,
       body: SafeArea(
         child: Scaffold(
           backgroundColor: Colors.white,
