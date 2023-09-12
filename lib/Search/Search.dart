@@ -3,7 +3,6 @@
 class Search{
 String? product_title;
 int? product_price;
-String? product_image;
 double? rating;
 
 Search(this.product_title, this.product_price, this.rating);

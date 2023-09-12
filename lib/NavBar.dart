@@ -26,7 +26,6 @@ class _NavBarState extends State<NavBar> {
   void _onItemTapped(int index){
     setState(() {
       _selectedIndex = index;
-
     });
     switch (index){
       case 0: _navigateToRoute(context, '/Welcome', const Welcome());

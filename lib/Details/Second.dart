@@ -146,9 +146,11 @@ class _SecondState extends State<Second> {
                                     radius: 20,
                                     backgroundColor: Colors.greenAccent,
                                     child: IconButton(onPressed: (){
-                                      setState(() {
+                                      if (_count > 0) {
+                                        setState(() {
                                         _count -= 1;
                                         });
+                                      }
                                       }, 
                                       icon: Icon(Icons.remove), color: Colors.white,
                                       ),

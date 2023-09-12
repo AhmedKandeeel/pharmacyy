@@ -54,16 +54,17 @@ class _WelcomeState extends State<Welcome> {
           // bottomNavigationBar: NavBar(),
     
           body: Padding( padding: EdgeInsets.all(15),
-            child: SingleChildScrollView(
-              child: Column(
+            child: ListView(
+              children: [ 
+                Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
                   width: double.infinity,
-                  child: Text("Category",
+                  child: Text("Categories",
                   style: TextStyle(fontWeight: FontWeight.bold,
-                  fontSize: 16
+                  fontSize: 20
                   ),
                   ),
                 ),
@@ -112,7 +113,7 @@ class _WelcomeState extends State<Welcome> {
                         SizedBox(
                           width: 30,
                         ),
-    
+                
                         Material( 
                           color: Colors.blue.withOpacity(0.2),
                           borderRadius: BorderRadius.only(
@@ -151,7 +152,7 @@ class _WelcomeState extends State<Welcome> {
                         SizedBox(
                           width: 30,
                         ),
-    
+                
                         Material( 
                           color: Colors.red.withOpacity(0.2),
                           borderRadius: BorderRadius.only(
@@ -190,7 +191,7 @@ class _WelcomeState extends State<Welcome> {
                         SizedBox(
                           width: 30,
                         ),
-    
+                
                         Material( 
                           color: Colors.blue.withOpacity(0.2),
                           borderRadius: BorderRadius.only(
@@ -229,7 +230,7 @@ class _WelcomeState extends State<Welcome> {
                         SizedBox(
                           width: 30,
                         ),
-    
+                
                         Material( 
                           color: Colors.red.withOpacity(0.2),
                           borderRadius: BorderRadius.only(
@@ -268,7 +269,7 @@ class _WelcomeState extends State<Welcome> {
                         SizedBox(
                           width: 30,
                         ),
-    
+                
                         Material( 
                           color: Colors.blue.withOpacity(0.2),
                           borderRadius: BorderRadius.only(
@@ -307,7 +308,7 @@ class _WelcomeState extends State<Welcome> {
                         SizedBox(
                           width: 30,
                         ),
-    
+                
                         Material( 
                           color: Colors.red.withOpacity(0.2),
                           borderRadius: BorderRadius.only(
@@ -346,7 +347,7 @@ class _WelcomeState extends State<Welcome> {
                         SizedBox(
                           width: 30,
                         ),
-    
+                
                         Material( 
                           color: Colors.blue.withOpacity(0.2),
                           borderRadius: BorderRadius.only(
@@ -391,7 +392,7 @@ class _WelcomeState extends State<Welcome> {
                   SizedBox(
                     height: 30,
                   ),
-    
+                
                   SingleChildScrollView( scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
@@ -514,7 +515,7 @@ class _WelcomeState extends State<Welcome> {
                         ),
                       ),
                       SizedBox(width:15),
-    
+                
                       Container(
                         height: 250,
                         width: 170,
@@ -556,7 +557,7 @@ class _WelcomeState extends State<Welcome> {
                     ],
                   ),
                   SizedBox(height: 25),
-    
+                
                   Row(
                     children: [
                       Container(
@@ -598,7 +599,7 @@ class _WelcomeState extends State<Welcome> {
                         ),
                       ),
                       SizedBox(width:15),
-    
+                
                       Container(
                         height: 250,
                         width: 170,
@@ -640,7 +641,7 @@ class _WelcomeState extends State<Welcome> {
                     ],
                   ),
                   SizedBox(height: 25),
-    
+                
                   Row(
                     children: [
                       Container(
@@ -682,7 +683,7 @@ class _WelcomeState extends State<Welcome> {
                         ),
                       ),
                       SizedBox(width:15),
-    
+                
                       Container(
                         height: 250,
                         width: 170,
@@ -724,10 +725,10 @@ class _WelcomeState extends State<Welcome> {
                     ],
                   ),
                   SizedBox(height: 25),
-        
+                    
                 ],
               ),
-              
+              ]
             ),
           ),
         ),

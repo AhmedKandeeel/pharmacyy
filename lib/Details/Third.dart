@@ -113,9 +113,11 @@ class _ThirdState extends State<Third> {
                             child: Row(
                               children: [
                                 IconButton(onPressed: (){
-                                  setState(() {
-                                    _count -= 1;
-                                    });
+                                  if (_count > 0) {
+                                        setState(() {
+                                        _count -= 1;
+                                        });
+                                      }
                                   }, 
                                   icon: Icon(Icons.remove), color: Colors.white,),
                                   Text(_count.toString(), style: TextStyle(color: Colors.white, fontSize: 20),),

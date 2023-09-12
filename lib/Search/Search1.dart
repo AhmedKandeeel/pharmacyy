@@ -1,4 +1,4 @@
-// ignore_for_file: file_names, non_constant_identifier_names
+// ignore_for_file: file_names, non_constant_identifier_names, prefer_is_empty
 
 import 'package:flutter/material.dart';
 import 'package:pharmacyy/Custom.dart';
@@ -67,7 +67,12 @@ class _Search1State extends State<Search1> {
                 ),
                 const SizedBox(height: 20),
                         Expanded(
-                          child: ListView.builder(
+                          child: display_list.length == 0?
+                          const Center(
+                            child: Text("No result found",
+                            style: TextStyle(color: Colors.white, fontSize: 22),)
+                          ):
+                          ListView.builder(
                             itemCount: display_list.length,
                             itemBuilder: (context, index) => ListTile(
                               title: Text(display_list[index].product_title!,
@@ -80,9 +85,8 @@ class _Search1State extends State<Search1> {
                             style: const TextStyle(color: Colors.white),
                             ),
                             trailing: Text('${display_list[index].rating}',
-                            style: const TextStyle(color: Colors.amber),
+                            style: const TextStyle(fontWeight: FontWeight.bold,fontFamily: "myfont",color: Color.fromARGB(255, 255, 213, 1)),
                             ),
-                            leading: Image.asset(display_list[index].product_image!),
                             )
                             )
                             ),

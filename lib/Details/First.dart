@@ -117,9 +117,11 @@ class _FirstState extends State<First> {
                                     radius: 20,
                                     backgroundColor: Colors.greenAccent,
                                     child: IconButton(onPressed: (){
-                                      setState(() {
+                                      if (_count > 0) {
+                                        setState(() {
                                         _count -= 1;
                                         });
+                                      }
                                       }, 
                                       icon: Icon(Icons.remove), color: Colors.white,
                                       ),
